@@ -35,8 +35,10 @@ function books_show($id)
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     
     $book = new Book();
+    $book->id = $row['id'];
     $book->title= $row['title'];
     $book->author= $row['author'];
+    $book->image= $row['image'];
     $book->fiction= $row['fiction'];
     $book->language= $row['language'];
     $book->description= $row['description'];
